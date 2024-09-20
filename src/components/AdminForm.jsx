@@ -4,7 +4,7 @@ import * as bootstrap from 'bootstrap'
 
 
 
-const AdminFrom = () => {
+const AdminForm = () => {
   const [name_en,setName] = useState('');
   const [name_ar,setArName] = useState('');
   const [username,setUsername] = useState('');
@@ -81,4 +81,4 @@ const AdminFrom = () => {
   )
 }
 
-export default AdminFrom ;
+export default AdminForm ;

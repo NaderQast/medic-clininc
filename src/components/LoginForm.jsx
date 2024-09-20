@@ -30,12 +30,16 @@ const LoginForm = () => {
     <div>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Username</label><br/>
-                <input type="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)}/><br/>
-                <label>Password:</label><br/>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            </div>
+            
+              <div className='form-group'>                <label>Username</label><br/>
+              <input type="username" id="username" className='form-control ' placeholder="Enter email" value={username} onChange={(e) => setUsername(e.target.value)}/><br/></div>
+              <div className='form-group'>
+              <label>Password:</label><br/>
+              <input type="password" id="password" className='form-control' value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+              </div>
+
+
+            
             <button  type='submit' style={{marginTop: '10px'}} className="btn btn-primary">Login</button>
             {error && <p>{error}</p>}
 
