@@ -16,13 +16,15 @@ const LoginForm = () => {
       e.preventDefault();
       try{
         const response = await axios.post('https://medical-clinic.serv00.net/api/login',{username,password});
-        const token = response.data.token;
+        const token = response.data.data.token;
+        console.log("response",response)
+        console.log(token)
         localStorage.setItem('authToken',token);
-        navigate('/dashboard')
+        navigate('/clinic-form')
         .then(console.log(username))
       }
       catch(error){
-        setError(error.response.message || 'wrong credentials')
+        setError(error.message || 'wrong credentials')
       }
    }
   
